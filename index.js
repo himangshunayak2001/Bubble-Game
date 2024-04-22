@@ -1,4 +1,4 @@
-var timer = 60;
+var timer = 59;
 var score = 0;
 var random = 0;
 function bubbleMaker() {
@@ -48,6 +48,7 @@ document.querySelector("#pbtm")
     }
 })
 
-runTimer()
+
 bubbleMaker()
+runTimer()
 newHit();
