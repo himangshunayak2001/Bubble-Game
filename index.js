@@ -23,13 +23,13 @@ function runTimer() {
             document.querySelector("#pbtm").innerHTML = `<h1> Game Over </h1> <br></br> <h3> You scored ${score}`
             document.querySelector("#hit").innerHTML = "0"
             document.querySelector("#score").innerHTML = "0"
-           
+
         }
     }, 1000)
 }
 
 function newHit() {
-    random = Math.floor(Math.random() * 10 );
+    random = Math.floor(Math.random() * 10);
     document.querySelector("#hit").textContent = random
 }
 
@@ -39,16 +39,50 @@ function scoreHolder() {
 }
 
 document.querySelector("#pbtm")
-.addEventListener("click",(data) => {
-    var number = Number(data.target.textContent)
-    if(number === random ) {
-        scoreHolder();
-        bubbleMaker()
-        newHit();
-    }
-})
+    .addEventListener("click", (data) => {
+        var number = Number(data.target.textContent)
+        if (number === random) {
+            scoreHolder();
+            bubbleMaker()
+            newHit();
+        }
+    })
 
 
 bubbleMaker()
 runTimer()
 newHit();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function bubbleMaker(numOfDivs) {
+//     const container = document.getElementById("your-container-id"); 
+//     for (let i = 0; i < numOfDivs; i++) {
+//       const newDiv = document.createElement("div");
+//       newDiv.classList.add("bubble");
+//       container.appendChild(newDiv);
+//     }
+//   }
+//   bubbleMaker(120);
+  
+  
+  
+
+
+
+
+// Jispe click karenge wo element par event raise hoga aur event listener na milne par event element ke parent par listener dhundega wha bhi naa milne par event pe parent ke paremt par listener dhundega 
